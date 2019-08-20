@@ -4,7 +4,6 @@ body {
     /*font-size: 16px;*/
     line-height: 1.7;
     color: $color-grey-dark;
-    padding: 3rem;
 }
 
 
@@ -15,7 +14,7 @@ body {
     /* need to use animation */
     backface-visibility: hidden;
     margin-bottom: 6rem;
-
+ 
     &--main {
         display: block;
         font-size: 6rem;
@@ -31,6 +30,11 @@ body {
         animation-delay: 3s; -> ждало 3 сек до запуска
         animation-iteration-count: 3; -> 3 раза покругу запускалось
         */
+
+        @include respond(phone) {
+            letter-spacing: 1rem;
+            font-family: 5rem;
+        }
     }
     
     &--sub {
@@ -41,6 +45,10 @@ body {
     
         /* animation than load image */
         animation: moveInRight 1s ease-out; 
+
+        @include respond(phone) {
+            letter-spacing: .5rem;
+        }
     }
 }
 
@@ -61,6 +69,14 @@ body {
 
     letter-spacing: 2px;
     transition: all .2s;
+
+    @include respond(tab-port) {
+        font-size: 3rem;
+    }
+    
+    @include respond(phone) {
+        font-size: 2.5rem;
+    }
 
     &:hover {
         // разварачивает строку
