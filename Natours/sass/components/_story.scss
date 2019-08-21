@@ -11,22 +11,46 @@
     // разворачивает блок немного под углом
     transform: skew(-12deg);
 
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include respond(phone) {
+        // разворачивает блок немного под углом
+        transform: skewX(0);
+    }
 
     &__shape {
         width: 15rem;
         height: 15rem;
         float: left;
         
-        // make round image + must be float and width and heigth
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
+        //  make round image + must be float and width and heigth
+        // -webkit-shape-outside: circle(50% at 50% 50%);
+        // shape-outside: circle(50% at 50% 50%);
+        // -webkit-clip-path: circle(50% at 50% 50%);
+        // clip-path: circle(50% at 50% 50%);
 
         // смещаем правее текст от картинки
         transform: translateX(-3rem) skewX(12deg);
 
+        border-radius: 50%;
         position: relative;
+        overflow: hidden;
+
+        @supports(clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%); 
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+        }
+
+        @include respond(phone) {
+            // разворачивает блок немного под углом
+            transform: translateX(-3rem) skewX(0);
+        }
     }
 
     &__img {
@@ -40,6 +64,11 @@
 
     &__text {
         transform: skewX(12deg);
+
+        @include respond(phone) {
+            // разворачивает блок немного под углом
+            transform: skewX(0);
+        }
     }
     
     &__caption{

@@ -5,12 +5,21 @@
     position: fixed;
     top:0;
     left:0;
-    background-color: rgba($color-black, .8);
     z-index: 9999;
-
+    background-color: rgba($color-black, .8);
     opacity: 0;
     visibility: hidden;
     transition: all .3s;
+
+    // делает размытым задний фон
+    @supports(-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba($color-black, .3);
+    }
+
+    // делает темным задний фон
+    // background-color: rgba($color-black, .3);
 
     &__content {
         @include absCenter;
