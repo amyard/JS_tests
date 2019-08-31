@@ -19,6 +19,12 @@
     --line: 1px solid var(--color-grey-light-2);
 }
 
+// for media
+$bp-largest: 75em;
+$bp-large: 68.75em;
+$bp-medium: 56.25em;
+$bp-small: 37.5em;
+$bp-smallest: 31.25em;
 
 * {
     margin: 0;
@@ -34,6 +40,10 @@
 html {
     box-sizing: border-box; // don't forget to write box-sizing: inherit; uppon
     font-size: 100%;
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
 }
 
 body {
