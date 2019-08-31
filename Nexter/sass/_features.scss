@@ -1,0 +1,37 @@
+.features {
+    margin: 15rem 0;
+
+    //take names from _base.scss
+    grid-column: center-start / center-end;
+
+    display: grid;
+    //grid-template-columns: repeat(3, 1fr); // create create columns
+    // как только на екране не помещается 3 блока по 40rem, то делает жва блока по 40 rem на экране
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    
+    grid-gap: 6rem;  // расстояние между колонками и строками
+    align-items: start;   // все строки начинаються сверху и нету лишнего растояния между стрококй и h4
+}
+
+.feature {
+
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-row-gap: 1.5rem;  // расстояние между строками
+    grid-column-gap: 2.5rem;   // расстояние между колонками
+
+    &__icon {
+        fill: $color-primary;
+        width: 4.5rem;
+        height: 4.5rem;
+
+        // иконка занимает место двух строк
+        grid-row: 1/span 2;
+
+        transform: translateY(-1rem);
+    }
+
+    &__text {
+        font-size: 1.7rem;
+    }
+}

@@ -1,0 +1,5 @@
+.gallery {
+    background-color: $color-grey-dark-1;
+    //take names from _base.scss
+    grid-column: full-start / full-end;
+}

@@ -1,0 +1,6 @@
+.homes {
+    background-color: $color-secondary;
+
+    //take names from _base.scss
+    grid-column: center-start / center-end;
+}

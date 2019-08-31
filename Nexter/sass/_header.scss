@@ -1,0 +1,7 @@
+.header {
+    background-color: $color-grey-dark-1;
+
+    //take names from _base.scss
+    // finisg at six column
+    grid-column: full-start / col-end 6;
+}
