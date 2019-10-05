@@ -206,7 +206,7 @@ $(document).ready(function () {
     //////////////////////////////////////////////////////////////////////////////////////
     //            tabulation
     //////////////////////////////////////////////////////////////////////////////////////
-    $('body').on('click', '.nav-tabs li', function (){
+    $(document).on('click', '.nav-tabs li', function (){
         $('.nav-tabs li').removeClass('active');
         $(this).addClass('active');
     });
@@ -359,10 +359,10 @@ $(document).ready(function () {
                                                     <h2>1199 грв</h2>\
                                                 </div>\
                                                 <div role="tabpanel" class="tab-pane" id="profile">\
-                                                    
+                                                    Second tab 2\
                                                 </div>\
                                                 <div role="tabpanel" class="tab-pane" id="messages">\
-                        
+                                                    Second tab 3\
                                                 </div>\
                                                 <div role="tabpanel" class="tab-pane" id="settings">\
                                                     
