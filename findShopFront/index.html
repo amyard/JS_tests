@@ -201,7 +201,7 @@
                     </div>
                 </div>
 
-                <div class='col-1-of-4 product-item'>
+                <div class='col-1-of-4 product-item'> 
                     <img src="img/asd3.jpg" alt="" class='product-item--img img-fluid'>
                     <div class='product-item--title'>Наушники (MDRXB550APW.E)</div>
                     <p class='product-item--price'>1199 грв</p>
@@ -446,35 +446,144 @@
 </footer>
 
 
+
+<div id="successModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document" id="success-change-modal">
+        <!-- Modal content -->
+        <div class="modal-content filter">
+            <div class="modal-header">
+                <div class='filter__title'>
+                    <img src="img/filter.png" alt="" class="filter__title-img down-arrow-grey">
+                    <span class='filter__title-name'>Фильтр</span>
+                    <img src="img/orange_down.png" alt="" class="filter__title-img down-arrow-orange">
+                </div>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class='filter__item'>
+                    <div class="filter-range-body">
+                        СЛАЙДЕР ТУТ!!!!
+                    </div>
+                </div>
+
+                <div class='filter__item'>
+                    <div class='filter__item-title active'>
+                        <span class='filter__item-title--name'>Бренд</span>
+                        <img src="img/arrow_up.png" alt="" class='filter__item-title--img'>
+                    </div>
+                    
+                    <div class='filter__item-checkboxes' style='display: block;'>
+                        <div>
+                            <input type="checkbox" id="airon" name="airon" class='filter__item-checkboxes--input'>
+                            <label for="airon" class='filter__item-checkboxes--label'>Airon</label>
+                        </div>
+        
+                        <div>
+                            <input type="checkbox" id="apacer" name="apacer" class='filter__item-checkboxes--input'>
+                            <label for="apacer" class='filter__item-checkboxes--label'>Apacer</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="apple" name="apple" class='filter__item-checkboxes--input'>
+                            <label for="apple" class='filter__item-checkboxes--label'>Apple</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="arun" name="arun" class='filter__item-checkboxes--input'>
+                            <label for="arun" class='filter__item-checkboxes--label'>Arun</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="assistant" name="assistant" class='filter__item-checkboxes--input'>
+                            <label for="assistant" class='filter__item-checkboxes--label'>Assistant</label>
+                        </div>
+                        <div class="filter__item-container">
+                            <span class="filter__item-more">Еще</span>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+        
+                <div class='filter__item'>
+                    <div class='filter__item-title'>
+                        <span class='filter__item-title--name'>Магазин</span>
+                        <img src="img/arrow_up.png" alt="" class='filter__item-title--img'>
+                    </div>
+                    
+                    <div class='filter__item-checkboxes' style='display: block;'>
+                        <div>
+                            <input type="checkbox" id="fokstrot" name="fokstrot" class='filter__item-checkboxes--input'>
+                            <label for="fokstrot" class='filter__item-checkboxes--label'>Фокстрот</label>
+                        </div>
+        
+                        <div>
+                            <input type="checkbox" id="citrus" name="citrus" class='filter__item-checkboxes--input'>
+                            <label for="citrus" class='filter__item-checkboxes--label'>Цитрус</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="allo" name="allo" class='filter__item-checkboxes--input'>
+                            <label for="allo" class='filter__item-checkboxes--label'>Алло</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="eldorado" name="eldorado" class='filter__item-checkboxes--input'>
+                            <label for="eldorado" class='filter__item-checkboxes--label'>Эльдорадо</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="comfy" name="comfy" class='filter__item-checkboxes--input'>
+                            <label for="comfy" class='filter__item-checkboxes--label'>Comfy</label>
+                        </div>
+                        <div class="filter__item-container">
+                            <span class="filter__item-more">Еще</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class='filter__item filter__item-padding'>
+                    <div class='filter__item-title'>
+                        <span class='filter__item-title--name'>Тип магазина</span>
+                        <img src="img/arrow_up.png" alt="" class='filter__item-title--img'>
+                    </div>
+                    
+                    <div class='filter__item-checkboxes no-btn-padd' style='display: block;'>
+                        <div>
+                            <input type="checkbox" id="online" name="online" class='filter__item-checkboxes--input' checked>
+                            <label for="online" class='filter__item-checkboxes--label'>Онлайн</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="offline" name="offline" class='filter__item-checkboxes--input'>
+                            <label for="offline" class='filter__item-checkboxes--label'>Офлайн</label>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class='filter__item'>
+                    <button class='orange-btn filter__item-submit'>Применить</button>
+                    <span class="filter__item-more">Очистить фильтры</span>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
 <script src='https://code.jquery.com/jquery-3.4.1.js'></script>
-<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<!-- <script src='js/dropdownLayer.js'></script> -->
 
 
-<script src='js/dropdownLayer.js'></script>
+<!-- <script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script> -->
+
 <script src='js/main.js'></script>
-
-<script>
-
-    $(document).ready(function(){
-        $('.js-dropdown-item').dropdownLayer({
-              'elemSelector':'js-dropdown-item',
-              'containerClass':'js-dropdown-items',
-              'descriptionClass':'js-description',
-              'arrowClass':'js-dropdown-arrow',
-              'dropdownClass':'js-dropdown',
-              'dropdownContentClass':'js-dropdown-content',
-              'disableDropdownClass':'js-dropdown-disable',
-              'useSlideUp':true,
-              'slideUpSpeed':200,
-              'useSlideDown':true,
-              'slideDownSpeed':200
-        });
-    });
-
-
-</script>
 
 
 </body>

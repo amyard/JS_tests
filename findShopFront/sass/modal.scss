@@ -1,0 +1,85 @@
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.modal {
+    border-radius: 0px;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0 !important;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+    .modal-dialog {
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+
+        .modal-content {
+            position: relative;
+            height: 100%!important;
+            margin: 0;
+            padding: 0;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s;
+
+            .modal-header {
+                padding: 0;
+                color: white;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                position: relative;
+
+                .close {
+                    color: $color-primary-grey-text;
+                    background-color: $color-primary-white;
+                    float: right;
+                    font-size: 28px;
+                    font-weight: bold;
+                    position: absolute;
+                    right: 64px;
+                    top: 20px;
+
+                    span {
+                        color: $color-primary-grey-text;
+                    }
+
+                    &:hover,
+                    &:focus {
+                        color: #fff;
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .modal-body {
+                font-size: 16px;
+                text-align: center;
+            }
+
+            .modal-footer {
+                padding: 0px 64px!important;
+                background: $color-primary-grey;
+                
+                .filter__item {
+                    padding-bottom: 24px;
+                }
+            }
+        }
+    }
+}
