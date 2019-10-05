@@ -262,6 +262,8 @@ $(document).ready(function () {
             return 5
         } else if (1280 < windowWidth < 1472) {
             return 4
+        } else {
+            return 3
         }
     }
 

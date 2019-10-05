@@ -1,54 +1,3 @@
-// .catalog-block {
-//     height: 100%;
-//     width: 84.7%;
-//     float: left;
-
-//     &__product-item {
-//         width: $product-item-width;
-//         display: inline-block;
-//         margin-right: 27px;
-//         margin-bottom: 32px;
-//         padding: 24px;
-//         background: $color-primary-white;
-//         box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-
-//         &:before {
-//             content: '';
-//         }
-
-//         &--img {
-//             height: 152px;
-//             margin-left: auto;
-//             margin-right: auto;
-//             position: relative;
-//             margin-bottom: 24px;
-//         } 
-//         &--title {
-//             font-family: 'Open Sans';
-//             font-style: normal;
-//             font-weight: normal;
-//             font-size: 16px;
-//             line-height: 24px;
-//             color: $color-primary-black;
-//         }
-//         &--price {
-//             font-family: 'Open Sans';
-//             font-style: normal;
-//             font-weight: bold;
-//             font-size: 20px;
-//             line-height: 24px;
-//             color: $color-primary-black;
-//             margin: 24px 0px;
-//         }
-
-//         &--action {
-//             display: flex;
-//             justify-content: space-between;
-//             align-items: center;
-//         }
-//     }
-
-// }
 
 .catalog-block {
     width: calc( ((100% - (5 * 32px)) / 6)*5 );
@@ -56,8 +5,26 @@
 }
 
 
+
 .section-items {
     width: calc( ((100% - (5 * 32px)) / 6)*5 + 4*32px);
+}
+
+@media screen and (max-width: 1472px) { 
+    .section-items {
+        width: calc( ((100% - (4 * 32px)) / 5)*4 + 3*32px);
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .section-items {
+        width: calc( ((100% - (3 * 32px)) / 4)*3 + 2*32px);
+    }
+}
+
+
+.section-items {
+    
     float: left;
 
     & .product-item {
@@ -102,11 +69,7 @@
     }
 }
 
-@media screen and (max-width: 1472px) { 
-    .section-items {
-        width: calc( ((100% - (4 * 32px)) / 5)*4 + 3*32px);
-    }
-}
+
 
 
 
