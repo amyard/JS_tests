@@ -53,3 +53,12 @@
         }
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .header__action-signin {
+        display: none;
+    }
+    .header__search-input {
+        width: 381px;
+    }
+}

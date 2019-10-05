@@ -22,10 +22,14 @@
     }
 }
 
+@media screen and (max-width: 986px) {
+    .section-items {
+        width: 100%;
+    }
+}
+
 
 .section-items {
-    
-    float: left;
 
     & .product-item {
         background: $color-primary-white;
