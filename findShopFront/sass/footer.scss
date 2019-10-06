@@ -10,6 +10,7 @@
             width: 25%;
             padding-bottom: 50px;
             padding-left: 0px;
+            font-weight: bold;
 
             & ul {
                 display: block;
@@ -29,5 +30,21 @@
                 }
             }
         }
+    }
+}
+
+
+@media screen and (max-width: 986px) {
+    .footer-content {
+        flex-wrap: wrap;
+    }
+    .footer-content__item {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .footer-content__item {
+        width: 100%;
     }
 }

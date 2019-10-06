@@ -155,7 +155,7 @@ $block-margin-huge: 4rem;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .col-1-of-5 {
         width:calc((100% - (2 * 32px)) / 3);
     

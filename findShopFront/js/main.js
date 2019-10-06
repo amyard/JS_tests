@@ -391,7 +391,7 @@ $(document).ready(function () {
     });
 
     $(window).on('resize', function() {
-        if ($(window).width() < 769) {
+        if ($(window).width() < 768) {
             var windowWidth = ($(window).width()) * 0.55;
             $('.header__search-input').css({'width': `${windowWidth}px`});
         } else {
