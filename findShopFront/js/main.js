@@ -380,7 +380,12 @@ $(document).ready(function () {
         } else {
             $(this).removeClass('active');
             $('.header__search-form').css({
-                'display': 'none'
+                'display': 'none',
+                'position':'relative',
+                'border':'none',
+                'background-color':'none',
+                'box-shadow':'none',
+
             })
         }
     });
@@ -389,6 +394,8 @@ $(document).ready(function () {
         if ($(window).width() < 769) {
             var windowWidth = ($(window).width()) * 0.55;
             $('.header__search-input').css({'width': `${windowWidth}px`});
+        } else {
+            $('.header__search-input').css({'width': `381px`});
         }
     })
     
