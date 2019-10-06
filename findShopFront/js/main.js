@@ -152,14 +152,6 @@ $(document).ready(function () {
 
                 position = parseInt(getDivAfterInsert) > parseInt(amountOfItems) ? amountOfItems : getDivAfterInsert
 
-                // if (parseInt(getDivAfterInsert) > parseInt(amountOfItems)) {
-                //     position = amountOfItems;
-                // } else if (parseInt(getDivAfterInsert) == parseInt(amountOfItems)) {
-                //     position = amountOfItems-1;
-                // } else {
-                //     position = getDivAfterInsert;
-                // }
-
                 var currDiv = allItems[position],
                     title = jQuery(allItems[positionOfItem-1]).find('.product-item--title').html();
                
@@ -221,7 +213,15 @@ $(document).ready(function () {
                                                     <div role="tabpanel" class="tab-pane active" id="home">\
                                                         <h3>${title}</h3>\
                                                         <p>Динамические закрытого типа - Частотные характеристики 5 Гц - 22000 Гц - Чувствительность 102 дБ / мВт - сопротивление 24 Ом (1 кГц) - микрофон есть...</p>\
-                                                        <h2>1199 грв</h2>\
+                                                        <div class='product-item--stars d-flex marg-y-24'>\
+                                                            <img src="img/star.png" alt="">\
+                                                            <img src="img/star.png" alt="">\
+                                                            <img src="img/star.png" alt="">\
+                                                            <img src="img/star.png" alt="">\
+                                                            <img src="img/star.png" alt="">\
+                                                        </div>\
+                                                        <span class='product-item--old-price d-block'>1999 грв</span>\
+                                                        <h2 class="no-pad-top">1199 грв</h2>\
                                                     </div>\
                                                     <div role="tabpanel" class="tab-pane" id="profile">\
                                                         <table>\
@@ -242,7 +242,8 @@ $(document).ready(function () {
                                                                 <td class='table-black'>+38 (000) 000-00-00</td>\
                                                             </tr>\
                                                         </table>\
-                                                        <h2>1199 грв</h2>\
+                                                        <span class='product-item--old-price d-block'>1999 грв</span>\
+                                                        <h2 class="no-pad-top">1199 грв</h2>\
                                                     </div>\
                                                     <div role="tabpanel" class="tab-pane" id="discount">\
                                                         <div class='discount'>\
@@ -257,7 +258,8 @@ $(document).ready(function () {
                                                                 <input class="header__search-input modal-input" type="search" placeholder="Введите Ваш телефон" autocomplete="on" name="" required="">\
                                                             </div>\
                                                         </form>\
-                                                        <h2>1199 грв</h2>\
+                                                        <span class='product-item--old-price d-block'>1999 грв</span>\
+                                                        <h2 class="no-pad-top">1199 грв</h2>\
                                                     </div>\
                                                 </div>\
                                             </div>\

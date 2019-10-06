@@ -98,3 +98,27 @@
     display: block;
     margin-bottom: 0;
 }
+
+.d-flex {
+    display:flex;
+}
+.d-block {
+    display: block;
+}
+.marg-y-24 {
+    margin-top: 24px;
+}
+.no-pad-top {
+    padding-top: 0px!important;
+}
+
+.modal .product-item--old-price {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration-line: line-through;
+    color: $color-primary-grey-text;
+    padding-top: 20px;
+}
