@@ -15,6 +15,30 @@ $(document).ready(function () {
 
 
     //////////////////////////////////////////////////////////////////////////////////////
+    //            problem with flexbox
+    //////////////////////////////////////////////////////////////////////////////////////
+    
+    function getFlexTitleBox() {
+        var allPrItems = $('.product-item--title'),
+            asd = [],
+            maxValue = '';
+        $.each(allPrItems, function(index, value) {
+            asd.push(jQuery(value).height());
+        });
+        maxValue = Math.max(...asd);
+        $('.product-item--title').css({'height':maxValue})
+    }
+
+    getFlexTitleBox()
+    $(window).on('resize', function() {
+        $('.product-item--title').css({'height':'100%'})
+        getFlexTitleBox();
+    });
+
+
+
+
+    //////////////////////////////////////////////////////////////////////////////////////
     //            tabulation
     //////////////////////////////////////////////////////////////////////////////////////
     $(document).on('click', '.nav-tabs li', function (){
@@ -70,6 +94,9 @@ $(document).ready(function () {
         $('.product-item').css({'opacity': '1'});
         $('.testtest').remove();
         $('.delete-empty').remove();
+        $('.product-item--action img').css({'display':'none'});
+        $('.product-item--old-price').css({'display':'none'});
+        $('.product-item--price').css({'margin-top':'24px'});
     }
 
     function getCurrentPosition(windowWidth) {
@@ -85,7 +112,7 @@ $(document).ready(function () {
     $(document).on('click', '.full-desc', function(event){
         event.preventDefault();
 
-        deleteExtraData();        
+        deleteExtraData();
 
 
         var classBtn = $(this).attr('class'),
@@ -100,7 +127,13 @@ $(document).ready(function () {
         if(windowWidth > 986) {
             // первый раз нажали на кнопку
             if(!classBtn.includes('active')) {
+
+                // display extra data for item block
                 $(this).addClass('active');
+                $(this).next().css({'display':'block'});
+                $(this).parent().parent().find('.product-item--old-price').css({'display':'block'});
+                $(this).parent().parent().find('.product-item--price').css({'margin-top':'0px'});
+
 
                 var positionOfItem = getPositionOfItemBlock();
 
