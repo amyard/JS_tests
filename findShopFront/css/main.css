@@ -72,6 +72,21 @@
     .col-1-of-4:nth-child(3), .col-1-of-4:nth-child(6), .col-1-of-4:nth-child(9), .col-1-of-4:nth-child(12), .col-1-of-4:nth-child(15), .col-1-of-4:nth-child(18), .col-1-of-4:nth-child(21), .col-1-of-4:nth-child(24), .col-1-of-4:nth-child(27), .col-1-of-4:nth-child(30) {
       margin-right: 0; } }
 
+@media screen and (max-width: 768px) {
+  .col-1-of-5 {
+    width: calc((100% - (2 * 32px)) / 3); }
+    .col-1-of-5:not(:last-child) {
+      margin-right: 2rem; }
+  .col-1-of-4 {
+    width: calc((100% - (1 * 32px)) / 2);
+    display: block;
+    float: left;
+    margin-bottom: 32px; }
+    .col-1-of-4:not(:last-child) {
+      margin-right: 2rem; }
+    .col-1-of-4:nth-child(2), .col-1-of-4:nth-child(4), .col-1-of-4:nth-child(6), .col-1-of-4:nth-child(8), .col-1-of-4:nth-child(10), .col-1-of-4:nth-child(12), .col-1-of-4:nth-child(14), .col-1-of-4:nth-child(16), .col-1-of-4:nth-child(18), .col-1-of-4:nth-child(20), .col-1-of-4:nth-child(22), .col-1-of-4:nth-child(24), .col-1-of-4:nth-child(26), .col-1-of-4:nth-child(28), .col-1-of-4:nth-child(30) {
+      margin-right: 0; } }
+
 .opacity-zero {
   opacity: 0; }
 
@@ -694,6 +709,12 @@ h5,
     padding: 22px 0; }
   .header__search {
     margin-left: 48px; }
+    .header__search-icon {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin: auto;
+      display: none; }
     .header__search-form {
       margin: 16px 0; }
     .header__search-input {
@@ -718,13 +739,34 @@ h5,
     .header__action-login {
       background: #F4F4F4;
       padding: 26px;
-      margin-left: 24px; }
+      margin-left: 24px;
+      position: relative; }
+      .header__action-login img {
+        display: inline-block;
+        position: absolute;
+        left: 40%;
+        display: none; }
 
 @media screen and (max-width: 1200px) {
   .header__action-signin {
     display: none; }
   .header__search-input {
     width: 381px; } }
+
+@media screen and (max-width: 986px) {
+  .header__search {
+    margin-left: 8px; } }
+
+@media screen and (max-width: 768px) {
+  .header__action-login span {
+    display: none; }
+  .header__action-login img {
+    display: inline-block;
+    left: 25% !important; }
+  .header__search-form {
+    display: none; }
+  .header__search-icon {
+    display: inline-block; } }
 
 @-webkit-keyframes animatetop {
   from {

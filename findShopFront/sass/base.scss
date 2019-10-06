@@ -57,6 +57,12 @@ $block-margin-huge: 4rem;
     display: block;
 }
 
+// @media screen and (max-width: 768px) {
+//     .row {
+//         width: initial;
+//     }
+// }
+
 @media screen and (min-width: 1473px) {
     .col-1-of-5 {
         width:calc((100% - (5 * 32px)) / 6);
@@ -148,6 +154,45 @@ $block-margin-huge: 4rem;
         &:nth-child(21),
         &:nth-child(24),
         &:nth-child(27),
+        &:nth-child(30) {
+            margin-right: 0;
+        }    
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .col-1-of-5 {
+        width:calc((100% - (2 * 32px)) / 3);
+    
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+
+    .col-1-of-4 {
+        width:calc((100% - (1 * 32px)) / 2);
+        display: block;
+        float: left;
+        margin-bottom: 32px;
+    
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+    
+        &:nth-child(2),
+        &:nth-child(4),
+        &:nth-child(6),
+        &:nth-child(8),
+        &:nth-child(10),
+        &:nth-child(12),
+        &:nth-child(14),
+        &:nth-child(16),
+        &:nth-child(18),
+        &:nth-child(20),
+        &:nth-child(22),
+        &:nth-child(24),
+        &:nth-child(26),
+        &:nth-child(28),
         &:nth-child(30) {
             margin-right: 0;
         }    
