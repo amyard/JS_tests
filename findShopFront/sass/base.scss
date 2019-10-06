@@ -199,6 +199,19 @@ $block-margin-huge: 4rem;
     }
 }
 
+@media screen and (max-width: 540px) {
+    .col-1-of-5 {
+        width:100%;
+    }
+
+    .col-1-of-4 {
+        width:100%;
+        display: block;
+        float: left;
+        margin-bottom: 32px; 
+    }
+}
+
 
 
 .opacity-zero {

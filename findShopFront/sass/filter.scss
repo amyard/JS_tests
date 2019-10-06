@@ -206,3 +206,15 @@
     }
 
 }
+
+@media screen and (max-width: 768px) {
+    .modal-content .filter__item-submit {
+        display: block;
+    }
+    .modal-content .filter__item-more {
+        margin-left: 0px;
+    } 
+    .modal .modal-dialog .modal-content .modal-footer {
+        padding: 0px 56px !important;
+    }
+}

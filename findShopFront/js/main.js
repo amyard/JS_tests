@@ -2,6 +2,19 @@
 $(document).ready(function () {
 
     //////////////////////////////////////////////////////////////////////////////////////
+    //            resize window
+    //////////////////////////////////////////////////////////////////////////////////////
+    // var width = $(window).width();
+    // $(window).on('resize', function() {
+    //     if ($(this).width() != width && $(this).width() < 648) {
+    //         width = $(this).width();
+    //         console.log(width)
+    //         $('.body').css({'min-width': `${width}px`})
+    //     }
+    // });
+
+
+    //////////////////////////////////////////////////////////////////////////////////////
     //            tabulation
     //////////////////////////////////////////////////////////////////////////////////////
     $(document).on('click', '.nav-tabs li', function (){
@@ -233,20 +246,19 @@ $(document).ready(function () {
                 modal.style.display = "none";
             }
         }
+        
         setTimeout(function() {
+            $(`#${id} .modal-content`).css({'height': '100%'})
             var windowHeight = $(window).height(),
                 modalHeight = $(`#${id} .modal-content`).height(),
                 newSize = windowHeight + 1;
 
-            console.log(windowHeight)
-            console.log(modalHeight)
-
             if(windowHeight < modalHeight) {
-                $(`#${id} .modal-content`).css({'height':`${newSize}px`, 'overflow-y':'scroll'})
-            } else {
                 $(`#${id} .modal-content`).css({'height':'100%', 'overflow-y':'scroll'})
+            } else {
+                $(`#${id} .modal-content`).css({'height':`${newSize}px`, 'overflow-y':'scroll'})
             }
-        }, 10);
+        }, 310);
     }
 
     $(document).on('click', '.filter__title', function() {      
