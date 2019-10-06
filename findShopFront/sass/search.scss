@@ -65,6 +65,11 @@
             flex: 1 1 auto;
             /////////////////////////////////////
         }
+
+        &--stars {
+            margin-top: 16px;
+            display: none;
+        }
         
         &--old-price {
             font-family: 'Open Sans';

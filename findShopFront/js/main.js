@@ -88,8 +88,6 @@ $(document).ready(function () {
             }
         }); 
 
-
-
         $('.full-desc').removeClass('active');
         $('.product-item').css({'opacity': '1'});
         $('.testtest').remove();
@@ -97,6 +95,7 @@ $(document).ready(function () {
         $('.product-item--action img').css({'display':'none'});
         $('.product-item--old-price').css({'display':'none'});
         $('.product-item--price').css({'margin-top':'24px'});
+        $('.product-item--stars').css({'display':'none'});
     }
 
     function getCurrentPosition(windowWidth) {
@@ -133,6 +132,8 @@ $(document).ready(function () {
                 $(this).next().css({'display':'block'});
                 $(this).parent().parent().find('.product-item--old-price').css({'display':'block'});
                 $(this).parent().parent().find('.product-item--price').css({'margin-top':'0px'});
+                $(this).parent().parent().find('.product-item--stars').css({'display':'flex'});
+                
 
 
                 var positionOfItem = getPositionOfItemBlock();
@@ -151,19 +152,33 @@ $(document).ready(function () {
 
                 position = parseInt(getDivAfterInsert) > parseInt(amountOfItems) ? amountOfItems : getDivAfterInsert
 
+                // if (parseInt(getDivAfterInsert) > parseInt(amountOfItems)) {
+                //     position = amountOfItems;
+                // } else if (parseInt(getDivAfterInsert) == parseInt(amountOfItems)) {
+                //     position = amountOfItems-1;
+                // } else {
+                //     position = getDivAfterInsert;
+                // }
+
                 var currDiv = allItems[position],
                     title = jQuery(allItems[positionOfItem-1]).find('.product-item--title').html();
+               
 
                 if(typeof currDiv === 'undefined') {
                     currDiv = allItems.last()
                     arr = [...Array(getDivAfterInsert - amountOfItems).keys()]
 
-                    arr.forEach(function(value){
-                        jQuery(currDiv).after(addSecondDataForBorrom())
-                    })
-
-                    last = jQuery($('.delete-empty').last())
-                    last.after(addDataDiv(title))
+                    // когда у нас количество елементов полное в ряд, то последний ряд не отображается (arr.length = 0)
+                    if (arr.length !== 0) {
+                        arr.forEach(function(value){
+                            jQuery(currDiv).after(addSecondDataForBorrom( $('.product-item').height() ))
+                        })
+                        last = jQuery($('.delete-empty').last())
+                        last.after(addDataDiv(title))
+                    } else {
+                        jQuery(currDiv).after(addDataDiv(title))
+                    }
+                    
                 } else {
                     jQuery(currDiv).before(addDataDiv(title))
 
@@ -260,8 +275,8 @@ $(document).ready(function () {
                             `
                 }
 
-                function addSecondDataForBorrom() {
-                    return `<div class='col-1-of-4 product-item delete-empty' style='opacity: 0;'></div>`
+                function addSecondDataForBorrom(height) {
+                    return `<div class='col-1-of-4 product-item delete-empty' style='opacity: 0; height: ${height}px; margin-bottom: 96px;'></div>`
                 }
             }
         } else {
@@ -306,13 +321,6 @@ $(document).ready(function () {
         span.onclick = function() {
             modal.style.display = "none";
         }
-
-        // When the user clicks anywhere outside of the modal, close it
-        // window.onclick = function(event) {
-        //     if (event.target == modal) {
-        //         modal.style.display = "none";
-        //     }
-        // }
         
         setTimeout(function() {
             $(`#${id} .modal-content`).css({'height': '100%'})
