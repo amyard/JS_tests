@@ -731,9 +731,11 @@ h5,
       width: 18px;
       height: 18px;
       margin: auto;
-      display: none; }
+      display: none;
+      transition: all .3s ease; }
     .header__search-form {
-      margin: 16px 0; }
+      margin: 16px 0;
+      transition: 1s all linear; }
     .header__search-input {
       width: 576px;
       border: 1px solid #757575;

@@ -351,7 +351,45 @@ $(document).ready(function () {
     $(document).on('click', '.discount-btn', function(){
         $('.modal-footer .orange-btn').html('Получить купон');
     });
-    
 
+
+    /////////////////////////////////////////////////////////////////////////////////
+    ////           Search icon
+    /////////////////////////////////////////////////////////////////////////////////
+    $(document).on('click', '.header__search-icon', function(event){
+        event.preventDefault();
+        var clsName = $(this).attr('class')
+        if(!clsName.includes('active')) {
+            $(this).addClass('active');
+            $('.header__search-form').css({
+                'display': 'block', 
+                'position':'absolute', 
+                'z-index':'100',
+                'top':'110px',
+                'margin':'0 auto',
+                'left':'32px',
+                'border':'1px solid #F4F4F4',
+                'background-color': '#f4f4f4',
+                'box-shadow':'0px 2px 8px rgba(0, 0, 0, 0.1)',
+                'padding':'7px 15px'
+            });
+            var windowWidth = ($(window).width()) * 0.55;
+            $('.header__search-input').css({'width': `${windowWidth}px`});
+
+            
+        } else {
+            $(this).removeClass('active');
+            $('.header__search-form').css({
+                'display': 'none'
+            })
+        }
+    });
+
+    $(window).on('resize', function() {
+        if ($(window).width() < 769) {
+            var windowWidth = ($(window).width()) * 0.55;
+            $('.header__search-input').css({'width': `${windowWidth}px`});
+        }
+    })
     
 });

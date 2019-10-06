@@ -22,10 +22,12 @@
             height: 18px;
             margin: auto;
             display: none;
+            transition: all .3s ease;
         }
 
         &-form {
             margin: 16px 0;
+            transition: 1s all linear;
         }
         &-input {
             width: 576px;
@@ -70,6 +72,7 @@
         }
     }
 }
+
 
 @media screen and (max-width: 1200px) {
     .header__action-signin {
