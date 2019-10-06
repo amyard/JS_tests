@@ -868,6 +868,16 @@ h5,
         .modal .modal-dialog .modal-content .modal-footer .filter__item {
           padding-bottom: 24px; }
 
+.modal-input {
+  width: 100%; }
+
+.modal-input:not(:last-child) {
+  margin-bottom: 24px; }
+
+.modal-input-form {
+  display: block;
+  margin-bottom: 0; }
+
 .pagination {
   display: flex;
   justify-content: center;

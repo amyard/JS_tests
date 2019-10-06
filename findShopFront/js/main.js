@@ -20,11 +20,10 @@ $(document).ready(function () {
     $(document).on('click', '.nav-tabs li', function (){
         $('.nav-tabs li').removeClass('active');
         $(this).addClass('active');
-
+        $('.modal-footer .orange-btn').html('В магазин');
 
         var trWidth = $('.tab-content').width() / 2;
         $('.full-description table td').css({'width': trWidth})
-        console.log(trWidth);
     });
 
     //////////////////////////////////////////////////////////////////////////////////////
@@ -167,7 +166,7 @@ $(document).ready(function () {
                                                 <ul class="nav nav-tabs" role="tablist">\
                                                     <li class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Продукт</a></li>\
                                                     <li><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Магазин</a></li>\
-                                                    <li><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Купон на скидку</a></li>\
+                                                    <li class='discount-btn'><a href="#discount" aria-controls="discount" role="tab" data-toggle="tab">Купон на скидку</a></li>\
                                                 </ul>\
                                                 
                                                 <div class="tab-content">\
@@ -197,11 +196,20 @@ $(document).ready(function () {
                                                         </table>\
                                                         <h2>1199 грв</h2>\
                                                     </div>\
-                                                    <div role="tabpanel" class="tab-pane" id="messages">\
-                                                        <div class='discount'>
-                                                            <p class='orange-color'>-50%</p>
-                                                            <p>Действителен до 26.09.2020 07:19</p>
-                                                        </div>
+                                                    <div role="tabpanel" class="tab-pane" id="discount">\
+                                                        <div class='discount'>\
+                                                            <p class='orange-color'>-50%</p>\
+                                                            <p>Действителен до 26.09.2020 07:19</p>\
+                                                        </div>\
+
+                                                        <form class="header__search-form modal-input-form" action="" method="get">\
+                                                            <div class="input-group">\
+                                                                <input class="header__search-input modal-input" type="search" placeholder="Введите Ваше имя" autocomplete="on" name="" required="">\
+                                                                <input class="header__search-input modal-input" type="search" placeholder="Введите Вашу почту" autocomplete="on" name="" required="">\
+                                                                <input class="header__search-input modal-input" type="search" placeholder="Введите Ваш телефон" autocomplete="on" name="" required="">\
+                                                            </div>\
+                                                        </form>\
+                                                        <h2>1199 грв</h2>\
                                                     </div>\
                                                 </div>\
                                             </div>\
@@ -267,11 +275,11 @@ $(document).ready(function () {
         }
 
         // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
+        // window.onclick = function(event) {
+        //     if (event.target == modal) {
+        //         modal.style.display = "none";
+        //     }
+        // }
         
         setTimeout(function() {
             $(`#${id} .modal-content`).css({'height': '100%'})
@@ -292,6 +300,15 @@ $(document).ready(function () {
             displayModal('successModal')
         }  
     });
+
+
+    /////////////////////////////////////////////////////////////////////////////////
+    ////           MODAL
+    /////////////////////////////////////////////////////////////////////////////////
+    $(document).on('click', '.discount-btn', function(){
+        $('.modal-footer .orange-btn').html('Получить купон');
+    });
+    
 
     
 });

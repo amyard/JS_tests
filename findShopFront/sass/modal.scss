@@ -87,3 +87,14 @@
         }
     }
 }
+
+.modal-input { width: 100%; }
+
+.modal-input:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.modal-input-form {
+    display: block;
+    margin-bottom: 0;
+}
