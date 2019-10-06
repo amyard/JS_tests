@@ -286,7 +286,7 @@ $(document).ready(function () {
         } 
     });
 
-    $(document).on('click', '.active', function(event){
+    $(document).on('click', '.full-desc.active', function(event){
         event.preventDefault();
         deleteExtraData();
     });
@@ -350,6 +350,9 @@ $(document).ready(function () {
     /////////////////////////////////////////////////////////////////////////////////
     $(document).on('click', '.discount-btn', function(){
         $('.modal-footer .orange-btn').html('Получить купон');
+    });
+    $(document).on('click', '.tab-pane.active', function(event){
+        event.preventDefault();
     });
 
 
