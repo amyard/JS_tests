@@ -20,6 +20,11 @@ $(document).ready(function () {
     $(document).on('click', '.nav-tabs li', function (){
         $('.nav-tabs li').removeClass('active');
         $(this).addClass('active');
+
+
+        var trWidth = $('.tab-content').width() / 2;
+        $('.full-description table td').css({'width': trWidth})
+        console.log(trWidth);
     });
 
     //////////////////////////////////////////////////////////////////////////////////////
@@ -162,7 +167,7 @@ $(document).ready(function () {
                                                 <ul class="nav nav-tabs" role="tablist">\
                                                     <li class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Продукт</a></li>\
                                                     <li><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Магазин</a></li>\
-                                                    <li><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">купон на скидку</a></li>\
+                                                    <li><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Купон на скидку</a></li>\
                                                 </ul>\
                                                 
                                                 <div class="tab-content">\
@@ -172,10 +177,31 @@ $(document).ready(function () {
                                                         <h2>1199 грв</h2>\
                                                     </div>\
                                                     <div role="tabpanel" class="tab-pane" id="profile">\
-                                                        Second tab 2\
+                                                        <table>\
+                                                            <tr>\
+                                                                <td class='table-grey'>Название магазина</td>\
+                                                                <td class='table-black'>Пример</td>\
+                                                            </tr>\
+                                                            <tr>\
+                                                                <td class='table-grey'>Доставка</td>\
+                                                                <td class='table-black'>Нет</td>\
+                                                            </tr>\
+                                                            <tr>\
+                                                                <td class='table-grey'>Способ оплаты</td>\
+                                                                <td class='table-black'>Нет</td>\
+                                                            </tr>\
+                                                            <tr>\
+                                                                <td class='table-grey'>Контактный телефон</td>\
+                                                                <td class='table-black'>+38 (000) 000-00-00</td>\
+                                                            </tr>\
+                                                        </table>\
+                                                        <h2>1199 грв</h2>\
                                                     </div>\
                                                     <div role="tabpanel" class="tab-pane" id="messages">\
-                                                        Second tab 3\
+                                                        <div class='discount'>
+                                                            <p class='orange-color'>-50%</p>
+                                                            <p>Действителен до 26.09.2020 07:19</p>
+                                                        </div>
                                                     </div>\
                                                 </div>\
                                             </div>\
@@ -261,8 +287,10 @@ $(document).ready(function () {
         }, 310);
     }
 
-    $(document).on('click', '.filter__title', function() {      
-        displayModal('successModal')
+    $(document).on('click', '.filter__title', function() {    
+        if ($(window).width() <= 986) {
+            displayModal('successModal')
+        }  
     });
 
     
