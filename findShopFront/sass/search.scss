@@ -74,13 +74,6 @@
 }
 
 
-// @media screen and (max-width: 1820px) {
-//     .product-item--img {
-//         max-width: 200px;
-//     }
-// }
-
-
 
 .full-description {
     height: 100%;
@@ -137,6 +130,42 @@
     }
 }
 
+
+@media screen and (max-width: 986px) {
+
+    #descModal .modal-dialog {
+        height: 100%;
+    }
+
+    .full-description__close--btn {
+        right: 0px;
+    }
+
+    .full-description__content {
+        flex-direction: column;
+        
+        &--img {
+            width: 100%;
+            height: 215px;
+            margin-bottom: 72px;
+        }
+
+        &--info {
+            width: 100%;
+            text-align: left;
+        }
+    }
+
+    #descModal .modal-footer {
+        justify-content: flex-end!important;
+
+        .full-description__footer {
+            .orange-btn {
+                margin-right: 0px;
+            }
+        }
+    }
+}
 
 
 // TABS 
