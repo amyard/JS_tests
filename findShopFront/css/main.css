@@ -976,7 +976,7 @@ h5,
   border: 1px solid #FF4B00; }
 
 input[type='range'] {
-  width: 210px;
+  width: 200px;
   height: 30px;
   overflow: hidden;
   cursor: pointer;
@@ -1067,7 +1067,7 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb {
     flex: 1 1 auto; }
   .section-items .product-item--stars {
     margin-top: 16px;
-    display: flex; }
+    display: none; }
   .section-items .product-item--old-price {
     font-family: 'Open Sans';
     font-style: normal;

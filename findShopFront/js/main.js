@@ -400,6 +400,12 @@ $(document).ready(function () {
         } else {
             $('.header__search-input').css({'width': `381px`});
         }
+
+        var sliderWidth = $('.filter').width(),
+            inputWidth = sliderWidth * 0.97;
+        $('.rangeslider').css({'width':`${sliderWidth}px`})
+
+        $('.filter').find('input[type="range"]').css({'width':`${inputWidth}px`})
     })
 
 

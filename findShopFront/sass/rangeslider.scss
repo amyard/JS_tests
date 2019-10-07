@@ -1,6 +1,6 @@
 
 input[type='range'] {
-    width: 210px;
+    width: 200px;
     height: 30px;
     overflow: hidden;
     cursor: pointer;
@@ -61,3 +61,39 @@ input[type='range'] {
      float: right;
      margin-right: -5px;
   }
+
+
+
+
+
+// @media screen and (min-width: 1473px) {
+//     .rangeslider {
+//         width:calc((100% - (5 * 32px)) / 6);
+//     }
+// }
+
+
+// @media screen and (max-width: 1472px) {
+
+//     .rangeslider {
+//         width:calc(((100% - (4 * 32px)) / 5) - 32 -32);
+//     }
+// }
+
+// @media screen and (max-width: 1280px) {
+//     .rangeslider {
+//         width:calc(((100% - (3 * 32px)) / 4)- 32 -32);
+//     }
+// }
+
+// @media screen and (max-width: 767px) {
+//     .rangeslider {
+//         width:calc(((100% - (2 * 32px)) / 3)- 32 -32);
+//     }
+// }
+
+// @media screen and (max-width: 540px) {
+//     .rangeslider {
+//         width:100%;
+//     }
+// }
